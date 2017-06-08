@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_menu"
+        android:title="搜索"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/scan_music"
+        android:icon="@drawable/ic_scan"
+        android:title="扫描本地音乐"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/select_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="选择排序方式"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/get_lyric"
+        android:icon="@drawable/ic_lyric"
+        android:title="获取封面歌词"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/upgrade_quality"
+        android:icon="@drawable/ic_quality"
+        android:title="升级音质"
+        app:showAsAction="never" />
+</menu>
