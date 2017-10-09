@@ -6,6 +6,7 @@ import android.support.v4.view.MenuItemCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.SearchView
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -13,8 +14,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.joor.Reflect
 
 class MainActivity : AppCompatActivity() {
-    lateinit var searchView: SearchView
-    lateinit var searchAutoComplete: SearchView.SearchAutoComplete
+    private lateinit var searchView: SearchView
+    private lateinit var searchAutoComplete: SearchView.SearchAutoComplete
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,9 +33,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.search_menu, menu)
-        val searchItem = menu.findItem(R.id.search_menu)
-        searchView = MenuItemCompat.getActionView(searchItem) as SearchView
-        searchAutoComplete= searchView.findViewById(R.id.search_src_text) as SearchView.SearchAutoComplete
+        searchView = menu.findItem(R.id.search_menu).actionView as SearchView
+        searchAutoComplete= searchView.findViewById(R.id.search_src_text)
 
         searchView.queryHint = "搜索本地歌曲"
         searchView.onActionViewExpanded()
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         searchAutoComplete.setTextColor(Color.WHITE)
         searchAutoComplete.textSize = 16f
 
-        val searchFrame=searchView.findViewById(R.id.search_edit_frame) as LinearLayout
+        val searchFrame=searchView.findViewById<LinearLayout>(R.id.search_edit_frame)
         val params=searchFrame.layoutParams as ViewGroup.MarginLayoutParams
         params.leftMargin=0
         searchFrame.layoutParams=params

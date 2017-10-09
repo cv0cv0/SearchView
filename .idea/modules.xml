@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SearchView.iml" filepath="$PROJECT_DIR$/SearchView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SearchView.iml" filepath="$PROJECT_DIR$/.idea/SearchView.iml" />
+      <module fileurl="file://E:\Code\Android\SearchView\SearchView.iml" filepath="E:\Code\Android\SearchView\SearchView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Code\Android\SearchView\app\app.iml" filepath="E:\Code\Android\SearchView\app\app.iml" />
     </modules>
   </component>
 </project>
